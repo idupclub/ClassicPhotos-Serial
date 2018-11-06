@@ -55,7 +55,7 @@ class ListViewController: UITableViewController {
     
     
     func applySepiaFilter(_ image:UIImage) -> UIImage? {
-        let inputImage = CIImage(data:UIImagePNGRepresentation(image)!)
+        let inputImage = CIImage(data:image.pngData()!)
         let context = CIContext(options:nil)
         let filter = CIFilter(name:"CISepiaTone")
         filter!.setValue(inputImage, forKey: kCIInputImageKey)
