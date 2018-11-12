@@ -9,7 +9,7 @@
 import UIKit
 import CoreImage
 
-let dataSourceURL = URL(string:"http://www.raywenderlich.com/downloads/ClassicPhotosDictionary.plist")
+let dataSourceURL = URL(string:"http://share.njuics.cn/ClassicPhotosDictionary.plist")
 
 class ListViewController: UITableViewController {
     
