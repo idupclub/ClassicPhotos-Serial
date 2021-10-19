@@ -9,7 +9,7 @@
 import UIKit
 import CoreImage
 
-let dataSourceURL = URL(string:"http://www.raywenderlich.com/downloads/ClassicPhotosDictionary.plist")
+let dataSourceURL = URL(string:"http://ios.njuics.cn/images.plist")
 
 class ListViewController: UITableViewController {
     
@@ -37,12 +37,14 @@ class ListViewController: UITableViewController {
         
         var image : UIImage?
         if let imageURL = URL(string:photos[rowKey] as! String),
-            let imageData = try? Data(contentsOf: imageURL){
+           let imageData = try? Data(contentsOf: imageURL ){
             //1
             let unfilteredImage = UIImage(data:imageData)
             //2
             image = self.applySepiaFilter(unfilteredImage!)
         }
+        
+        
         
         // Configure the cell...
         cell.textLabel?.text = rowKey
